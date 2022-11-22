@@ -12,6 +12,7 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
+
 const Home = React.forwardRef((props, ref) => {
   return (
     <>
@@ -52,7 +53,9 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
       </Routes>
-      <Footer/>
+      {/* {false && <Route path="/blog" exact component={Blog} />}
+      {false && <Route path="/blog/:id" component={BlogPost} />} */}
+      <Footer />
     </BrowserRouter>
   );
 };
