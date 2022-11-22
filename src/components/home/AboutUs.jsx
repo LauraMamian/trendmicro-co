@@ -1,5 +1,4 @@
 import React from "react";
-
 import axios from "axios";
 import { Jumbotron } from "./migration";
 
@@ -8,9 +7,32 @@ const pictureLinkRegex = new RegExp(
 );
 
 const AboutUs = ({ heading, message, link, imgSize, resume }) => {
+
+  const iconsLaura = [
+    {
+      image: "fa-github",
+      url: "https://github.com/LauraMamian",
+    },
+    {
+      image: "fa-linkedin",
+      url: "https://www.linkedin.com/in/lauramamianc",
+    },
+  ]
+
+  const iconsCarolina = [
+    {
+      image: "fa-github",
+      url: "https://github.com/carolinaMateus",
+    },
+    {
+      image: "fa-linkedin",
+      url: "https://www.linkedin.com/in/carolina-mateus-582a17210/",
+    },
+  ]
+
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
-  // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+
   React.useEffect(() => {
     const handleRequest = async () => {
       const instaLink = "https://www.instagram.com/";
@@ -39,8 +61,8 @@ const AboutUs = ({ heading, message, link, imgSize, resume }) => {
           <div className="col-5 d-none d-lg-block align-self-center">
             {showPic && (
               <img
-                className="border border-secondary rounded-circle"
-                src={profilePicUrl}
+                className="border border-gray-300 rounded-circle"
+                src={profilePicUrl[0]}
                 alt="profilepicture"
                 width={imgSize}
                 height={imgSize}
@@ -48,22 +70,52 @@ const AboutUs = ({ heading, message, link, imgSize, resume }) => {
             )}
           </div>
           <div className={`col-lg-${showPic ? "7" : "12"}`}>
-            <h2 className="display-4 mb-5 text-center">{heading}</h2>
-            <p className="lead text-center">{message}</p>
-            {resume && (
-              <p className="lead text-center">
+            <h2 className="display-4 mb-5 text-center">{heading[0]}</h2>
+            <p className="lead text-center">{message[0]}</p>
+            <div className="">
+              {iconsLaura.map((icon, index) => (
                 <a
-                  className="btn btn-outline-dark btn-lg"
-                  href={resume}
+                  key={`social-icon-${index}`}
                   target="_blank"
-                  rel="noreferrer noopener"
-                  role="button"
-                  aria-label="Resume/CV"
+                  rel="noopener noreferrer"
+                  href={icon.url}
+                  aria-label={`My ${icon.image.split("-")[1]}`}
                 >
-                  Resume
+                  <i className={`fab ${icon.image}  fa-3x socialicons text-black `} />
                 </a>
-              </p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="container row mb-5">
+          <div className="col-5 d-none d-lg-block align-self-center">
+            {showPic && (
+              <img
+                className="border border-gray-300 rounded-circle"
+                src={profilePicUrl[1]}
+                alt="profilepicture"
+                width={imgSize}
+                height={imgSize}
+              />
             )}
+          </div>
+          <div className={`col-lg-${showPic ? "7" : "12"}`}>
+            <h2 className="display-4 mb-5 text-center">{heading[1]}</h2>
+            <p className="lead text-center">{message[1]}</p>
+            <div className="">
+              {iconsCarolina.map((icon, index) => (
+                <a
+                  key={`social-icon-${index}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={icon.url}
+                  aria-label={`My ${icon.image.split("-")[1]}`}
+                >
+                  <i className={`fab ${icon.image}  fa-3x socialicons text-black`} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
