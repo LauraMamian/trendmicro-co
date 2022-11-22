@@ -69,10 +69,10 @@ const AboutUs = ({ heading, message, link, imgSize, resume }) => {
               />
             )}
           </div>
-          <div className={`col-lg-${showPic ? "7" : "12"}`}>
+          <div className={`col-lg-${showPic ? "7" : "12"} `}>
             <h2 className="display-4 mb-5 text-center">{heading[0]}</h2>
             <p className="lead text-center">{message[0]}</p>
-            <div className="">
+            <div className="d-flex align-items-center justify-content-center">
               {iconsLaura.map((icon, index) => (
                 <a
                   key={`social-icon-${index}`}
@@ -81,7 +81,7 @@ const AboutUs = ({ heading, message, link, imgSize, resume }) => {
                   href={icon.url}
                   aria-label={`My ${icon.image.split("-")[1]}`}
                 >
-                  <i className={`fab ${icon.image}  fa-3x socialicons text-black `} />
+                  <i className={`fab ${icon.image}  fa-3x socialicons text-black`} />
                 </a>
               ))}
             </div>
@@ -103,7 +103,7 @@ const AboutUs = ({ heading, message, link, imgSize, resume }) => {
           <div className={`col-lg-${showPic ? "7" : "12"}`}>
             <h2 className="display-4 mb-5 text-center">{heading[1]}</h2>
             <p className="lead text-center">{message[1]}</p>
-            <div className="">
+            <div className="d-flex align-items-center justify-content-center">
               {iconsCarolina.map((icon, index) => (
                 <a
                   key={`social-icon-${index}`}

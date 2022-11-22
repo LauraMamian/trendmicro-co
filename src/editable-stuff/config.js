@@ -14,13 +14,13 @@ const mainBody = {
 
 const about = {
   show: true,
-  heading: ["Laura Andrea Mamián Cerón", "Carolina"],
+  heading: ["Laura Andrea Mamián Cerón", "Carolina Mateus"],
   imageLink: [require("../editable-stuff/Laura/LauraMamian.jpeg"), require("../editable-stuff/Carolina/Carolina.jpg")],
   imageSize: 375,
   message:
     [
       "Soy estudiante de último semestre ingeniería electrónica y telecomunicaciones de la Universidad del Cauca. Me apasiona la tecnología y la programación, me gusta aprender cosas nuevas y me considero una persona responsable y comprometida con mis proyectos.",
-      "Carolina"
+      "Carolina" // ESTO LO TIENES QUE MODIFICAR, COLOCAS LO QUE QUIERAS
     ],
 };
 
