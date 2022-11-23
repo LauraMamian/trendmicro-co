@@ -14,13 +14,13 @@ const mainBody = {
 
 const about = {
   show: true,
-  heading: ["Laura Andrea Mamián Cerón", "Carolina Mateus"],
+  heading: ["Laura Andrea Mamián Cerón", "Tatiana Carolina Mateus Pinilla "],
   imageLink: [require("../editable-stuff/Laura/LauraMamian.jpeg"), require("../editable-stuff/Carolina/Carolina.jpg")],
   imageSize: 375,
   message:
     [
       "Soy estudiante de último semestre ingeniería electrónica y telecomunicaciones de la Universidad del Cauca. Me apasiona la tecnología y la programación, me gusta aprender cosas nuevas y me considero una persona responsable y comprometida con mis proyectos.",
-      "Carolina" // ESTO LO TIENES QUE MODIFICAR, COLOCAS LO QUE QUIERAS
+      "Soy estudiante de ingeniería de sistemas, cursando el noveno sementre en la Fundación Universitaria de San Gil seccional Chiquinquirá, Boyacá. Tengo 22 años. Me gusta el campo y estudiar sobre las nuevas tecnologías del mundo y explorar su herramientas "
     ],
 };
 
