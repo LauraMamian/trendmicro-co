@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "RETO",
   middleName: "",
   lastName: " CPITS Colombia",
-  message: "Integración con Docker y Kubernetes" ,
+  message: "Integración con Docker y Kubernetes",
 };
 
 const about = {
